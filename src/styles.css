@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f3f0e8;
+  --color-paper-deep: #e7e1d4;
+  --color-surface: #fffcf6;
+  --color-ink: #1c2e42;
+  --color-ink-soft: #3d5164;
+  --color-muted: #6a7a8a;
+  --color-navy: #2f547a;
+  --color-navy-deep: #1e3a56;
+  --color-cyan: #0e7a9c;
+  --color-cyan-soft: #d4eef5;
+  --color-line: #d5cfc3;
+  --color-danger: #9b3a3a;
+  --color-ok: #2f6b4f;
+
+  --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-display: "IBM Plex Serif", "Georgia", serif;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --text-2xs: 0.625rem;
+  --tracking-caps: 0.14em;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer utilities {
+  .safe-pt {
+    padding-top: max(0.75rem, env(safe-area-inset-top));
+  }
+  .safe-pb {
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+  }
+  /* First paint: fit on desktop, native-pixel reading zoom on phones. */
+  .doc-canvas {
+    width: 100%;
+  }
+  @media (max-width: 899px) {
+    .doc-canvas {
+      width: 335%;
+      margin-left: calc((100% - 335%) / 2);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

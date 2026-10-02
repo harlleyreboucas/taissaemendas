@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Emendas Leve",
+      "hasCanvas": false,
+      "bodyTextLen": 64,
+      "bodyTextHash": "ae99ca2f4377b8b81eecff552f78543e441a3e9c982800aa81360ef2e3cef883",
+      "bodyTextPrefix": "Emendas Leve 21,2 MB → 8,9 MB · −58% · 17 pág. PDF 1/17 100% Ler",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Emendas Leve",
+      "hasCanvas": false,
+      "bodyTextLen": 64,
+      "bodyTextHash": "c157542fbb2af39d1f930fd5d8fdf9c5fad2609ac39b558ef99f2d70fd485460",
+      "bodyTextPrefix": "Emendas Leve 21,2 MB → 8,9 MB · −58% · 17 pág. PDF 1/17 335% Ler",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
